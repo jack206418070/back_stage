@@ -69,6 +69,15 @@ a {
   text-decoration: none;
   color: inherit; }
 
+hr {
+  margin: 0;
+  border: none;
+  height: 1px;
+  background-color: #CED4DA; }
+
+form {
+  color: #212529; }
+
 /* circle write */
 /* 圖片取代文字 */
 /* bg setting */
@@ -87,9 +96,6 @@ a {
           align-items: center;
   cursor: pointer;
   border: none; }
-  .btn:hover {
-    background-color: #111619;
-    color: #ffffff; }
   .btn.hover-primary:hover {
     background-color: #AA0601;
     color: #000000;
@@ -97,6 +103,9 @@ a {
 
 .btn-primary {
   background-color: #AA0601; }
+
+.btn-white {
+  background-color: #ffffff !important; }
 
 .btn-success {
   background-color: #198754; }
@@ -200,25 +209,6 @@ a {
       line-height: 20px; }
 
 /* form set */
-form .form-group .checkbox {
-  width: 24px;
-  height: 24px;
-  border: none;
-  margin: 0; }
-
-form .form-group .form-control {
-  padding: 16px 20px;
-  width: 100%;
-  font-size: 22px;
-  border: none;
-  border-radius: 0;
-  color: #cb5656; }
-  form .form-group .form-control:focus {
-    outline: none; }
-  @media screen and (max-width: 620px) {
-    form .form-group .form-control {
-      font-size: 16px; } }
-
 /* margin set */
 .m-auto {
   margin: auto; }
@@ -5587,6 +5577,9 @@ form .form-group .form-control {
 .text-c-danger {
   color: #DC3545; }
 
+.text-c-gray-400 {
+  color: #CED4DA; }
+
 .text-ver-lr {
   -webkit-writing-mode: vertical-lr;
       -ms-writing-mode: tb-lr;
@@ -5655,6 +5648,12 @@ form .form-group .form-control {
 
 .border-b-black {
   border-bottom: 1px solid #212529; }
+
+.border-gray {
+  border: 1px solid #CED4DA; }
+
+.border-success {
+  border: 1px solid #198754; }
 
 @media screen and (max-width: 996px) {
   .b-md-none {
@@ -5761,6 +5760,11 @@ form .form-group .form-control {
   color: #212529;
   font-weight: bold; }
 
+.h3 {
+  font-size: 20px;
+  color: #212529;
+  font-weight: bold; }
+
 .hover-success {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
@@ -5768,12 +5772,36 @@ form .form-group .form-control {
   .hover-success:hover {
     color: #198754; }
 
+.hover-success-bg {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; }
+  .hover-success-bg:hover {
+    color: #ffffff;
+    background-color: #198754 !important; }
+
+.hover-danger-bg {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; }
+  .hover-danger-bg:hover {
+    color: #ffffff;
+    background-color: #DC3545 !important; }
+
 .hover-light {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s; }
   .hover-light:hover {
     color: #21b26f; }
+
+.hover-light-bg {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; }
+  .hover-light-bg:hover {
+    color: #115c39;
+    background-color: #21b26f; }
 
 .overlay {
   position: absolute;
@@ -5881,9 +5909,11 @@ form .form-group .form-control {
   -o-transition: 1s;
   transition: 1s; }
   .card.hide {
-    opacity: 0; }
+    opacity: 0;
+    z-index: 100; }
   .card.show {
-    opacity: 1; }
+    opacity: 1;
+    z-index: 1000; }
   .card.show-bg {
     height: 272px; }
   .card .card-img {
@@ -5915,5 +5945,64 @@ form .form-group .form-control {
       opacity: 0; }
     .card .card-footer.show {
       opacity: 1; }
+
+.modal {
+  width: 30%;
+  height: 70%;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  overflow: auto;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s; }
+  .modal.hide {
+    opacity: 0;
+    z-index: 100; }
+  .modal.show {
+    opacity: 1;
+    z-index: 1000; }
+  .modal .modal-title {
+    position: fixed;
+    background-color: #fff;
+    border-bottom: 1px solid #CED4DA;
+    left: 0;
+    right: 0;
+    width: 30%;
+    margin: auto; }
+  .modal .modal-body {
+    margin-top: 95px; }
+  .modal .modal-footer {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    background: #ffffff;
+    z-index: 1000;
+    border-top: 1px solid #CED4DA; }
+
+form label {
+  display: block;
+  font-size: 14px;
+  line-height: 1.1; }
+
+form input {
+  padding: 16px 0 16px 16px;
+  width: 100%;
+  background: #F8F9FA;
+  outline: none;
+  border: none; }
+
+form select {
+  width: 100%;
+  padding: 16px; }
+
+form input[type=checkbox] {
+  width: auto;
+  display: inline-block;
+  margin-bottom: 20px; }
 
 /*# sourceMappingURL=all.css.map */

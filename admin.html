@@ -8,6 +8,11 @@
   <title>後台-admin</title>
   <link rel="stylesheet" href="./assets/style/sass/all.css">
   <link rel="stylesheet" href="./assets/fontawesome-free-5.15.3-web/css/all.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
 </head>
 
 <body>
@@ -70,9 +75,130 @@
     </div>
 </div>
 
+<div class="modal modal-add bg-white p-absolute hide">
+    <div class="modal-title p-8 mb-8">
+        <h2 class="h2 d-flex jy-content-between align-items-center">
+            Add Admin
+            <a class="js-modal-close" href="#"><i class="fas fa-times f-size-xs hover-light" data-toggle="add-close"></i></a>
+        </h2>    
+    </div>
+    <div class="modal-body px-8">
+        <form action="#">
+            <div class="form-group">
+                <p class="h3 mb-4">Account</p>
+                <label for="name">Name</label>
+                <input class="mb-4" type="text" id="name">
+                <label for="email">Email</label>
+                <input type="email" id="email">
+            </div>
+            <hr class="my-6">
+            <div class="form-group">
+                <p class="h3 mb-4">Verification</p>
+                <div class="verified-text d-flex jy-content-between align-items-center mb-4">
+                    <p class="d-flex align-items-center f-w-bold">
+                        <span class="material-icons text-c-success mr-2">
+                            check_circle
+                        </span>
+                        Verified
+                    </p>
+                    <p>2020/4/12</p>
+                </div>
+                <input class="btn btn-white border-gray p-0 text-center py-4 text-c-success" type="button" value="Send Verification Mail">
+            </div>
+            <hr class="my-6">
+            <div class="form-group">
+                <p class="h3 mb-4">Access Level</p>
+                <select name="identity" id="identity">
+                    <option value="">-Choose access level-</option>
+                </select>
+            </div>
+            <hr class="my-6">
+            <div class="form-group">
+                <p class="h3 mb-4">Custom Access</p>
+                <input type="checkbox" value="lecture"> Lecture <br>
+                <input type="checkbox" value="Coupon"> Coupon <br>
+                <input type="checkbox" value="Message"> Message <br>
+                <input type="checkbox" value="Setting"> Setting <br>
+                <input type="checkbox" value="task menu"> Task Menu
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer py-2 px-8 d-flex jy-content-end">
+        <input class="btn btn-white py-2 px-8 mr-4 text-c-success border-success hover-success-bg js-modal-close" type="button" value="Cancel" data-toggle="add-close">
+        <input class="btn btn-success py-2 px-8 text-c-white hover-light-bg" type="submit" value="add">
+    </div>
+</div>
+
+<div class="modal modal-edit bg-white p-absolute hide">
+    <div class="modal-title p-8 mb-8">
+        <h2 class="h2 d-flex jy-content-between align-items-center">
+            Edit Admin
+            <a class="js-modal-close" href="#"><i class="fas fa-times f-size-xs hover-light" data-toggle="close"></i></a>
+        </h2>    
+    </div>
+    <div class="modal-body px-8">
+        <form action="#">
+            <div class="form-group">
+                <p class="h3 mb-4">Account</p>
+                <label for="name">Name</label>
+                <input class="mb-4" type="text" id="name" placeholder="Emir Wicks">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="emir.wicks@mail.com">
+            </div>
+            <hr class="my-6">
+            <div class="form-group">
+                <p class="h3 mb-4">Verification</p>
+                <div class="verified-text d-flex jy-content-between align-items-center mb-4">
+                    <p class="d-flex align-items-center f-w-bold">
+                        <span class="material-icons text-c-success mr-2">
+                            check_circle
+                        </span>
+                        Verified
+                    </p>
+                    <p>2020/4/12</p>
+                </div>
+                <input class="btn btn-white border-gray p-0 text-center py-4 text-c-gray-400" type="button" value="Send Verification Mail" disabled>
+            </div>
+            <hr class="my-6">
+            <div class="form-group">
+                <p class="h3 mb-4">Access Level</p>
+                <select name="identity" id="identity">
+                    <option value="admin">admin</option>
+                </select>
+            </div>
+            <hr class="my-6">
+            <div class="form-group">
+                <p class="h3 mb-4">Custom Access</p>
+                <input type="checkbox" value="lecture"> Lecture <br>
+                <input type="checkbox" value="Coupon"> Coupon <br>
+                <input type="checkbox" value="Message"> Message <br>
+                <input type="checkbox" value="Setting"> Setting <br>
+                <input type="checkbox" value="task menu"> Task Menu
+            </div>
+            <hr class="my-6">
+            <div class="form-group mb-8">
+                <p class="h3 mb-4">Deactivate Account</p>
+                <p class="d-flex align-items-center f-w-bold text-c-danger mb-4">
+                    <span class="material-icons text-c-danger mr-2">
+                        warning
+                    </span>
+                    This cannot be undone!
+                </p>
+                <input class="btn btn-white border-danger-2 p-0 text-center py-4 text-c-danger hover-danger-bg" type="button" value="Deactivate This Account">
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer py-2 px-8 d-flex jy-content-end">
+        <input class="btn btn-white py-2 px-8 mr-4 text-c-success border-success hover-success-bg js-modal-close" type="button" value="Cancel" data-toggle="close">
+        <input class="btn btn-success py-2 px-8 text-c-white hover-light-bg" type="submit" value="Update">
+    </div>
+</div>
+
+
+
 <div class="header d-flex align-items-end mb-12 ">
     <h2 class="h2 mr-12">Admin</h2>
-    <h3> <a href="#"><i class="fas fa-plus text-c-success f-size-xs mr-2 hover-light"></i></a> Add New Admin</h3>
+    <h3> <a href="#" class="text-c-success hover-light js-modal-add" data-toggle="open-add"><i class="fas fa-plus f-size-xs mr-2"></i>Add New Admin</a></h3>
     <div class="icon ml-auto">
         <a href="#" class="hover-success"><i class="fas fa-search f-size-xs mr-6"></i></a>
         <a href="#" class="hover-success"><i class="fas fa-bell f-size-xs"></i></a>
@@ -94,7 +220,7 @@
             <td>Yes</td>
             <td>
                 <a href="#" class="mr-6 js-admin-1"><i class="fas fa-eye"></i></a> 
-                <a href="#"><i class="fas fa-pen"></i></a>
+                <a href="#" class="js-modal-1"><i class="fas fa-pen"></i></a>
             </td>
         </tr>
         <tr class="admin-row">
