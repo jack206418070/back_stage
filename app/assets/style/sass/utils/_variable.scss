@@ -1,0 +1,65 @@
+
+
+
+/*pure  color */
+$white: #ffffff;
+$gray-100: #F8F9FA;
+$gray-600: #6C757D;
+$gray-900: #212529;
+
+
+/* font-family */
+$font-microsoft:Microsoft JhengHei;
+$font-english:'Roboto', sans-serif;
+$font-chinese:'Noto Sans', sans-serif;
+
+ 
+/* font-color */
+$f-color-primary: #AA0601;
+$f-color-secondary: #650300;
+$f-color-thirdary: #000000;
+
+
+/* web color */
+$primary: #AA0601;
+$secondary: #111619;
+$thirdary: #FBF2F2;
+$success: #198754;
+
+
+
+
+/* font-size set */
+$font-base: 16px;
+$font-xs: $font-base * 1.25;
+$font-s: $font-base * 1.5;
+$font-m: $font-base * 2.25;
+$font-l: $font-base * 3;
+
+
+
+/* width set */
+$max-width: 1140px;
+
+
+
+
+/*helper var*/
+$helper-sizes:(
+    'xxs': 5px,
+    'xs': 10px,
+    's': 20px,
+    'm': 35px,
+    'l': 50px,
+    'xl': 100px
+);
+
+$helper-flex:(
+    'center':  center,
+    'between': space-between,
+    'around': space-around,
+    'start': flex-start,
+    'end': flex-end,
+    'stretch': stretch,
+    'baseline': baseline
+);

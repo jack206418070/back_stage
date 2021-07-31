@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title><%- title %></title>
+  <link rel="stylesheet" href="./assets/style/sass/all.css">
+  <link rel="stylesheet" href="./assets/fontawesome-free-5.15.3-web/css/all.css">
+</head>
+
+<body>
+  <div class="backStage d-flex">
+    <div class="aside bg-gray-100 py-8 d-flex flex-dir-col">
+      <div class="logo pl-8 mb-8">
+        <img src="https://hexschool.github.io/webLayoutTraining1st/week5/logo-ANSWER.svg" alt="logo">
+      </div>
+      <ul class="aside-menu">
+        <li class="pl-8">
+          <a href="#" class=""><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+        </li>
+        <li class="pl-8">
+          <a href="#" class=""><i class="fas fa-comments"></i> Question</a>
+        </li>
+        <li class="pl-8">
+          <a href="#" class=""><i class="fas fa-atlas"></i> Assignment</a>
+        </li>
+        <li class="pl-8">
+          <a href="#" class=""><i class="fas fa-file-video"></i> Course</a>
+        </li>
+        <li class="pl-8">
+          <a href="./admin.html" class=""><i class="fas fa-users-cog"></i>Admin</a>
+        </li>
+        <li class="pl-8">
+          <a href="#" class=""><i class="fas fa-cog"></i> Settings</a>
+        </li>
+      </ul>
+  
+      <div class="aside-admin pl-8 d-flex align-items-center">
+        <img class="mr-4" src="https://hexschool.github.io/webLayoutTraining1st/week5/andychen.jpeg" alt="admin">
+        <div class="aside-admin">
+          <h3 class="text-c-gray-900 f-w-bold mb-1">Andy Chen</h3>
+          <p class="text-c-gray-600">andy0401@mail.com</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="main p-8">
+      <%- contents %>
+    </div>
+  </div>
+
+  <script src="./assets/js/vendors.js"></script>
+</body>
+</html>

@@ -1,0 +1,464 @@
+/* margin set */
+.m-auto{
+    margin: auto;
+}
+.mx-auto{
+    margin-right: auto;
+    margin-left: auto;
+}
+.mr-auto{
+    margin-right: auto;
+}
+.mt-auto{
+    margin-top: auto;
+}
+.ml-auto{
+    margin-left: auto;
+}
+@each $key, $value in $helper-sizes{
+    .mt-#{$key}{
+        margin-top: $value;
+    }
+    .mb-#{$key}{
+        margin-bottom: $value !important;
+    }
+    .mr-#{$key}{
+        margin-right: $value;
+    }
+    .ml-#{$key}{
+        margin-left: $value;
+    }
+    .my-#{$key}{
+        margin-top: $value !important;
+        margin-bottom: $value !important;
+    }
+    .mx-#{$key}{
+        margin-right: $value;
+        margin-left: $value;
+    }
+}
+@include createSpace("m",40, margin);
+
+
+
+/* padding set */
+@each $key, $value in $helper-sizes{
+    .pt-#{$key}{
+        padding-top: $value;
+    }
+    .pb-#{$key}{
+        padding-bottom: $value;
+    }
+    .pr-#{$key}{
+        padding-right: $value;
+    }
+    .pl-#{$key}{
+        padding-left: $value;
+    }
+    .py-#{$key}{
+        padding-top: $value;
+        padding-bottom: $value;
+    }
+    .px-#{$key}{
+        padding-left: $value;
+        padding-right: $value;
+    }
+    .p-#{$key}{
+        padding: $value;
+    }
+}
+@include createSpace("p",40,"padding");
+
+
+
+
+
+/* dispay set */
+.d-block{
+    display: block;
+}
+
+.d-none{
+    display: none;
+}
+
+.d-inline-block{
+    display: inline-block;
+}
+
+@include pad{
+    .d-md-block{
+        display: block !important;
+    }
+    .d-md-none{
+        display: none !important;
+    }
+    .d-md-flex{
+        display: flex;
+    }
+}
+
+@include mobile{
+    .d-sm-block{
+        display: block !important;
+    }
+    .d-sm-none{
+        display: none !important;
+    }
+}
+
+
+.d-flex{
+    display: flex;
+    &.flex-wrap{
+        flex-wrap: wrap;
+    }
+}
+
+@each $key, $value in $helper-flex {
+    .jy-content-#{$key}{
+        justify-content: $value;
+    }
+    .align-items-#{$key}{
+        align-items: $value;
+    }
+    .align-self-#{$key}{
+        align-self: $value;
+    }
+}
+
+.flex-wrap{
+    flex-wrap: wrap;
+}
+
+.flex-set-40{
+    flex: 0 0 40% !important;
+}
+.flex-set-50{
+    flex: 0 0 50% !important;
+}
+
+
+.flex-d-rr{
+    flex-direction: row-reverse;
+}
+
+.flex-dir-col{
+    flex-direction: column;
+}
+
+.flex-md-col-reverse{
+    @include mobile{
+        flex-direction: column-reverse;
+    }
+}
+
+.order-1{
+    order: 1;
+}
+.order-2{
+    order: 2;
+}
+.order-3{
+    order: 3;
+}
+@include pad{
+    .order-md-1{
+        order: 1;
+    }
+    .order-md-2{
+        order: 2;
+    }
+    .order-md-3{
+        order: 3;
+    }
+}
+@include mobile{
+    .order-sm-1{
+        order: 1;
+    }
+    .order-sm-2{
+        order: 2;
+    }
+    .order-sm-3{
+        order: 3;
+    }
+}
+
+/* text set */
+
+.text-{
+    &right{
+        text-align: right;
+    }
+    &center{
+        text-align: center;
+    }
+    &left{
+        text-align: left;
+    }
+}
+
+
+/* text set */
+
+.text-c-{
+    &primary{
+        color: $f-color-primary;
+    }
+    &secondary{
+        color: $f-color-secondary;
+    }
+    &white{
+        color: white;
+    }
+    &black{
+        color: black;
+    }
+    &secondary-dark{
+        color: darken($f-color-secondary, 10%);
+    }
+    &thirdary{
+        color: $thirdary;
+    }
+    &thirdary-dark{
+        color: darken($thirdary, 30%);
+    }
+    &forthary{
+        color: $secondary;
+    }
+    &gray-600{
+        color: $gray-600;
+    }
+    &gray-900{
+        color: $gray-900;
+    }
+    &success{
+        color: $success;
+    }
+}
+
+.text-ver-lr{
+    writing-mode: vertical-lr;
+}
+.text-ver-rl{
+    writing-mode: vertical-rl;
+}
+
+
+
+
+/* bg-color */
+.bg-{
+    &primary{
+        background-color: $primary;
+    }
+    &secondary{
+        background-color: $secondary;
+    }
+    &thirdary{
+        background-color: $thirdary;
+    }
+    &white{
+        background-color: $white;
+    }
+    &light{
+        background-color: #FBF2F2;
+    }
+    &dark{
+        background-color: $f-color-secondary;
+    }
+    &gray-100{
+        background-color: $gray-100;
+    }
+}
+
+.bg-none{
+    background-color: transparent !important;
+}
+
+
+/* border-set */
+
+.border{
+    border: 1px solid $thirdary;
+}
+
+.bl-primary-2{
+    border-left: 8px solid $primary;
+}
+
+
+.border-secondary{
+    border: 1px solid $secondary;
+}
+
+.border-thirdary{
+    border: 1px solid $thirdary;
+}
+
+.border-white{
+    border: 1px solid $white;
+}
+.border-white-m{
+    border: 2px solid $white;
+}
+.border-r{
+    border-right: 1px solid $thirdary;
+}
+
+.border-b{
+    border-bottom: 2px solid $thirdary;
+}
+.border-b-white{
+    border-bottom: 2px solid $white;
+}
+.border-b-black{
+    border-bottom: 1px solid $gray-900  ;
+}
+
+
+@include pad{
+    .b-md-none{
+        border: 0 !important;
+    }
+    .b-md-1{
+        border: 1px solid #DCDCDC;
+    }
+}
+@include mobile{
+    .b-sm-none{
+        border: 0 !important;
+    }
+    .b-sm-1{
+        border: 1px solid #DCDCDC !important;
+    }
+}
+
+/* font-style */
+.f-f-en{
+    font-family: $font-english;
+}
+
+.f-f-ch{
+    font-family: $font-chinese;
+}
+
+.f-w-bold{
+    font-weight: bold;
+}
+
+.f-w-600{
+    font-weight: 600;
+}
+
+
+
+/* width height set */
+.w-10{
+    width: 10%;
+}
+.w-20{
+    width: 20%;
+}
+.w-25{
+    width: 25%;
+}
+.w-30{
+    width: 30%;
+}
+.w-100{
+    width: 100% !important;
+}
+.h-100{
+    height: 100% !important;
+}
+
+
+
+/* text address set */
+
+.text-center{
+    text-align: center;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.text-left{
+    text-align: left;
+}
+
+/* postion */
+.p-relative{
+    position: relative;
+}
+
+.p-absolute{
+    position: absolute;
+}
+@include mobile{
+    .p-sm-absolute{
+        position: absolute;
+    }
+    .p-sm-relative{
+        position: relative;
+    }
+}
+
+/* z-index */
+
+.zindex-100{
+    z-index: -100;
+}
+
+.zindex100{
+    z-index: 100;
+}
+
+.zindex1000{
+    z-index: 1000;
+}
+
+.zindex-1000{
+    z-index: -1000;
+}
+
+
+/* link pointer */
+
+.link-pointer{
+    cursor: pointer;
+}
+
+
+
+/* f-size set */
+
+.f-size-base{
+    font-size: $font-base;
+}
+
+.f-size-xs{
+    font-size: $font-xs;
+}
+
+.f-size-s{
+    font-size: $font-s;
+}
+
+.f-size-m{
+    font-size: $font-m;
+}
+
+.f-size-l{
+    font-size: $font-l;
+}
+
+
+.h2{
+    font-size: $font-xs;
+    color: $gray-900;
+    font-weight: bold;
+}
