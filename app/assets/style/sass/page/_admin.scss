@@ -15,6 +15,15 @@
             width: 23%;
         }
     }
+    tr{
+        &.admin-row{
+            transition: 0.3s;
+            &:hover{
+                background-color: darken($gray-100,10%);
+                cursor: pointer;
+            }
+        }
+    }
     th{
         color: $gray-900;
         font-weight: bold;
@@ -33,4 +42,124 @@
             }
         }
     }
+}
+
+.card{
+    width: 480px;
+    height: 205px;
+    z-index: 100;
+    top: 0; 
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    transition: 1s;
+    &.hide{
+        opacity: 0;
+        z-index: 100;
+    }
+    &.show{
+        opacity: 1;
+        z-index: 1000;
+    }
+    &.show-bg{
+        height: 272px;
+    }
+    .card-img{
+        flex: 0 0 34%;
+        img{
+            height: 141px;
+            object-fit: cover;
+        }
+    }
+    .card-body{
+        flex: 0 0 66%;
+        line-height: 1.2;
+    }
+    .card-body-bottom{
+        i{
+            &.active{
+                transform: rotate(180deg);
+            }
+        }
+    }
+    .card-footer{
+        flex:0 0 60%;
+        padding-top: 32px;
+        transition: 2s;
+        &.hide{
+            opacity: 0;
+        }
+        &.show{
+            opacity: 1;
+        }
+    }
+}
+
+.modal{
+    width: 30%;
+    height: 70%;
+    z-index: 100;
+    // height: 600px;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    overflow:auto;
+    transition: 1s;
+    &.hide{
+        opacity: 0;
+        z-index: 100;
+    }
+    &.show{
+        opacity: 1;
+        z-index: 1000;
+    }
+    .modal-title{
+        position: fixed;
+        // width: 100%;
+        background-color: #fff;
+        border-bottom: 1px solid $gray-400;
+        left: 0;
+        right: 0;
+        width: 30%;
+        margin: auto;
+    }
+    .modal-body{
+        margin-top: 95px;
+    }
+    .modal-footer{
+        position: sticky;
+        bottom: 0;
+        width: 100%;
+        background: $white;
+        z-index: 1000;
+        border-top: 1px solid $gray-400;
+    }
+}
+
+form{
+    label{
+        display: block;
+        font-size: 14px;
+        line-height: 1.1;
+    }
+    input{
+        padding: 16px 0 16px 16px;
+        width: 100%;
+        background: $gray-100;
+        outline: none;
+        border: none;
+    }
+    select{
+        width: 100%;
+        padding: 16px;
+    }
+    input[type=checkbox]{
+        width: auto;
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+
 }

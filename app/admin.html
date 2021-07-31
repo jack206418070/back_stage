@@ -3,13 +3,155 @@ title: 後台-admin
 layout: ./app/layout.ejs
 engine: ejs
 ---
+<div class="card p-8 bg-white p-absolute d-flex flex-wrap hide">
+    <div class="card-img">
+        <img src="https://hexschool.github.io/webLayoutTraining1st/week5/emir.jpeg" alt="admin-img">
+    </div>
+    <div class="card-body pl-6">
+        <h2 class="mb-2 d-flex jy-content-between align-items-center">#1 
+            <a class="js-admin-close" href="#"><i class="fas fa-times f-size-xs hover-light" data-toggle="close"></i></a>
+        </h2>
+        <h3>Admin</h3>
+        <p class="h2 mb-2">Emir Wicks</p>
+        <p class="mb-5 text-c-gray-600">emir.wicks@mail.com</p>
+        <div class="card-body-bottom d-flex jy-content-between align-items-center pl-4">
+            <p>verified</p>
+            <a href="#"><i class="fas fa-chevron-down hover-light js-admin-btn" data-btnToggle="close"></i></a>
+        </div>
+    </div>
+    <div class="card-footer d-flex ml-auto jy-content-between hide">
+        <div class="btn btn-danger bg-white border-danger-2 f-w-bold text-c-danger py-2 px-8 mr-4">Deactivate</div>
+        <div class="btn btn-success text-c-white px-8">Edit</div>
+    </div>
+</div>
 
-<div class="header d-flex align-items-end mb-12">
+<div class="modal modal-add bg-white p-absolute hide">
+    <div class="modal-title p-8 mb-8">
+        <h2 class="h2 d-flex jy-content-between align-items-center">
+            Add Admin
+            <a class="js-modal-close" href="#"><i class="fas fa-times f-size-xs hover-light" data-toggle="add-close"></i></a>
+        </h2>    
+    </div>
+    <div class="modal-body px-8">
+        <form action="#">
+            <div class="form-group">
+                <p class="h3 mb-4">Account</p>
+                <label for="name">Name</label>
+                <input class="mb-4" type="text" id="name">
+                <label for="email">Email</label>
+                <input type="email" id="email">
+            </div>
+            <hr class="my-6">
+            <div class="form-group">
+                <p class="h3 mb-4">Verification</p>
+                <div class="verified-text d-flex jy-content-between align-items-center mb-4">
+                    <p class="d-flex align-items-center f-w-bold">
+                        <span class="material-icons text-c-success mr-2">
+                            check_circle
+                        </span>
+                        Verified
+                    </p>
+                    <p>2020/4/12</p>
+                </div>
+                <input class="btn btn-white border-gray p-0 text-center py-4 text-c-success" type="button" value="Send Verification Mail">
+            </div>
+            <hr class="my-6">
+            <div class="form-group">
+                <p class="h3 mb-4">Access Level</p>
+                <select name="identity" id="identity">
+                    <option value="">-Choose access level-</option>
+                </select>
+            </div>
+            <hr class="my-6">
+            <div class="form-group">
+                <p class="h3 mb-4">Custom Access</p>
+                <input type="checkbox" value="lecture"> Lecture <br>
+                <input type="checkbox" value="Coupon"> Coupon <br>
+                <input type="checkbox" value="Message"> Message <br>
+                <input type="checkbox" value="Setting"> Setting <br>
+                <input type="checkbox" value="task menu"> Task Menu
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer py-2 px-8 d-flex jy-content-end">
+        <input class="btn btn-white py-2 px-8 mr-4 text-c-success border-success hover-success-bg js-modal-close" type="button" value="Cancel" data-toggle="add-close">
+        <input class="btn btn-success py-2 px-8 text-c-white hover-light-bg" type="submit" value="add">
+    </div>
+</div>
+
+<div class="modal modal-edit bg-white p-absolute hide">
+    <div class="modal-title p-8 mb-8">
+        <h2 class="h2 d-flex jy-content-between align-items-center">
+            Edit Admin
+            <a class="js-modal-close" href="#"><i class="fas fa-times f-size-xs hover-light" data-toggle="close"></i></a>
+        </h2>    
+    </div>
+    <div class="modal-body px-8">
+        <form action="#">
+            <div class="form-group">
+                <p class="h3 mb-4">Account</p>
+                <label for="name">Name</label>
+                <input class="mb-4" type="text" id="name" placeholder="Emir Wicks">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="emir.wicks@mail.com">
+            </div>
+            <hr class="my-6">
+            <div class="form-group">
+                <p class="h3 mb-4">Verification</p>
+                <div class="verified-text d-flex jy-content-between align-items-center mb-4">
+                    <p class="d-flex align-items-center f-w-bold">
+                        <span class="material-icons text-c-success mr-2">
+                            check_circle
+                        </span>
+                        Verified
+                    </p>
+                    <p>2020/4/12</p>
+                </div>
+                <input class="btn btn-white border-gray p-0 text-center py-4 text-c-gray-400" type="button" value="Send Verification Mail" disabled>
+            </div>
+            <hr class="my-6">
+            <div class="form-group">
+                <p class="h3 mb-4">Access Level</p>
+                <select name="identity" id="identity">
+                    <option value="admin">admin</option>
+                </select>
+            </div>
+            <hr class="my-6">
+            <div class="form-group">
+                <p class="h3 mb-4">Custom Access</p>
+                <input type="checkbox" value="lecture"> Lecture <br>
+                <input type="checkbox" value="Coupon"> Coupon <br>
+                <input type="checkbox" value="Message"> Message <br>
+                <input type="checkbox" value="Setting"> Setting <br>
+                <input type="checkbox" value="task menu"> Task Menu
+            </div>
+            <hr class="my-6">
+            <div class="form-group mb-8">
+                <p class="h3 mb-4">Deactivate Account</p>
+                <p class="d-flex align-items-center f-w-bold text-c-danger mb-4">
+                    <span class="material-icons text-c-danger mr-2">
+                        warning
+                    </span>
+                    This cannot be undone!
+                </p>
+                <input class="btn btn-white border-danger-2 p-0 text-center py-4 text-c-danger hover-danger-bg" type="button" value="Deactivate This Account">
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer py-2 px-8 d-flex jy-content-end">
+        <input class="btn btn-white py-2 px-8 mr-4 text-c-success border-success hover-success-bg js-modal-close" type="button" value="Cancel" data-toggle="close">
+        <input class="btn btn-success py-2 px-8 text-c-white hover-light-bg" type="submit" value="Update">
+    </div>
+</div>
+
+
+
+<div class="header d-flex align-items-end mb-12 ">
     <h2 class="h2 mr-12">Admin</h2>
-    <h3><i class="fas fa-plus text-c-success f-size-xs mr-2"></i> Add New Admin</h3>
-    <div class="search ml-auto">
-        <i class="fas fa-search f-size-xs mr-6"></i>
-        <i class="fas fa-bell f-size-xs"></i>
+    <h3> <a href="#" class="text-c-success hover-light js-modal-add" data-toggle="open-add"><i class="fas fa-plus f-size-xs mr-2"></i>Add New Admin</a></h3>
+    <div class="icon ml-auto">
+        <a href="#" class="hover-success"><i class="fas fa-search f-size-xs mr-6"></i></a>
+        <a href="#" class="hover-success"><i class="fas fa-bell f-size-xs"></i></a>
     </div>
 </div>
 <div class="admin">
@@ -21,17 +163,17 @@ engine: ejs
             <th>Verified</th>
             <th></th>
         </tr>
-        <tr>
+        <tr class="admin-row">
             <td>#1</td>
             <td>Emir Wicks</td>
             <td>emir.wicks@mail.comm</td>
             <td>Yes</td>
             <td>
-                <a href="#" class="mr-6"><i class="fas fa-eye"></i></a> 
-                <a href="#"><i class="fas fa-pen"></i></a>
+                <a href="#" class="mr-6 js-admin-1"><i class="fas fa-eye"></i></a> 
+                <a href="#" class="js-modal-1"><i class="fas fa-pen"></i></a>
             </td>
         </tr>
-        <tr>
+        <tr class="admin-row">
             <td>#2</td>
             <td>Zaina Goldsmith</td>
             <td>zaina.goldsmith@mail.com</td>
@@ -41,7 +183,7 @@ engine: ejs
                 <a href="#"><i class="fas fa-pen"></i></a>
             </td>
         </tr>
-        <tr>
+        <tr class="admin-row">
             <td>#3</td>
             <td>Mahima Lopez</td>
             <td>Mahima.Lopez@mail.com</td>
@@ -51,7 +193,7 @@ engine: ejs
                 <a href="#"><i class="fas fa-pen"></i></a>
             </td>
         </tr>
-        <tr>
+        <tr class="admin-row">
             <td>#4</td>
             <td>Pharrell Murray</td>
             <td>Pharrell.Murray@mail.com</td>
@@ -61,7 +203,7 @@ engine: ejs
                 <a href="#"><i class="fas fa-pen"></i></a>
             </td>
         </tr>
-        <tr>
+        <tr class="admin-row">
             <td>#5</td>
             <td>Annika Mcbride</td>
             <td>Annika.Mcbride@mail.com</td>
@@ -71,7 +213,7 @@ engine: ejs
                 <a href="#"><i class="fas fa-pen"></i></a>
             </td>
         </tr>
-        <tr>
+        <tr class="admin-row">
             <td>#6</td>
             <td>Fatimah Clark</td>
             <td>Fatimah.Clark@mail.com</td>
@@ -81,7 +223,7 @@ engine: ejs
                 <a href="#"><i class="fas fa-pen"></i></a>
             </td>
         </tr>
-        <tr>
+        <tr class="admin-row">
             <td>#7</td>
             <td>Klaudia Rhodes</td>
             <td>Klaudia.Rhodes@mail.com</td>
@@ -91,7 +233,7 @@ engine: ejs
                 <a href="#"><i class="fas fa-pen"></i></a>
             </td>
         </tr>
-        <tr>
+        <tr class="admin-row">
             <td>#8</td>
             <td>Tillie Lucero</td>
             <td>Tillie.Lucero@mail.com</td>
@@ -101,7 +243,7 @@ engine: ejs
                 <a href="#"><i class="fas fa-pen"></i></a>
             </td>
         </tr>
-        <tr>
+        <tr class="admin-row">
             <td>#9</td>
             <td>Sabrina Stephenson</td>
             <td>Sabrina.Stephenson@mail.com</td>
@@ -111,7 +253,7 @@ engine: ejs
                 <a href="#"><i class="fas fa-pen"></i></a>
             </td>
         </tr>
-        <tr>
+        <tr class="admin-row">
             <td>#10</td>
             <td>Annie Smith</td>
             <td>Annie.Smith@mail.com</td>
@@ -126,7 +268,7 @@ engine: ejs
     <ul class="pagination">
         <li><a class="pagination-item" href="#"><i class="fas fa-chevron-left text-c-success"></i></a></li>
         <li><a class="pagination-item" href="#">1</a></li>
-        <li><a class="pagination-item" href="#">2</a></li>
+        <li><a class="pagination-item active" href="#">2</a></li>
         <li><a class="pagination-item" href="#">3</a></li>
         <li><a class="pagination-item" href="#"><i class="fas fa-chevron-right text-c-success"></i></a></li>
     </ul>

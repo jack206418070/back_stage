@@ -236,6 +236,12 @@
     &success{
         color: $success;
     }
+    &danger{
+        color: $danger;
+    }
+    &gray-400{
+        color: $gray-400;
+    }
 }
 
 .text-ver-lr{
@@ -287,7 +293,9 @@
 .bl-primary-2{
     border-left: 8px solid $primary;
 }
-
+.border-danger-2{
+    border: 2px solid $danger;
+}
 
 .border-secondary{
     border: 1px solid $secondary;
@@ -314,9 +322,14 @@
     border-bottom: 2px solid $white;
 }
 .border-b-black{
-    border-bottom: 1px solid $gray-900  ;
+    border-bottom: 1px solid $gray-900;
 }
-
+.border-gray{
+    border: 1px solid $gray-400;
+}
+.border-success{
+    border: 1px solid $success;
+}
 
 @include pad{
     .b-md-none{
@@ -461,4 +474,52 @@
     font-size: $font-xs;
     color: $gray-900;
     font-weight: bold;
+}
+.h3{
+    font-size: 20px;
+    color: $gray-900;
+    font-weight: bold;
+}
+.hover-success{
+    transition: 0.3s;
+    &:hover{
+        color: $success;
+    }
+}
+.hover-success-bg{
+    transition: 0.3s;
+    &:hover{
+        color: $white;
+        background-color: $success !important;
+    }
+}
+.hover-danger-bg{
+    transition: 0.3s;
+    &:hover{
+        color: $white;
+        background-color: $danger !important;
+    }
+}
+.hover-light{
+    transition: 0.3s;
+    &:hover{
+        color: lighten($success, 10%);
+    }
+}
+.hover-light-bg{
+    transition: 0.3s;
+    &:hover{
+        color: darken($success, 10%);
+        background-color: lighten($success, 10%);
+    }
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.5);
 }

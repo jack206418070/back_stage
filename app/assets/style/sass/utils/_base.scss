@@ -8,6 +8,15 @@ a{
     color: inherit;
 }
 
+hr{
+    margin: 0;
+    border:none;
+    height:1px;
+    background-color: $gray-400;
+}
 
+form{
+    color: $gray-900;
+}
 
 
