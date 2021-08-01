@@ -6,7 +6,7 @@
         padding-bottom: 13px;
         border-left: 4px solid transparent;
         transition: 0.3s;
-        &:hover{
+        &:hover, &.active{
             color: $success;
             border-left: 4px solid $success;
         }
