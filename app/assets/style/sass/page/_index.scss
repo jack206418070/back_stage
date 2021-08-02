@@ -16,6 +16,7 @@
 }
 .assign-message{
     flex: 0 0 67%;
+    position: relative;
 }
 .assign-message-title{
     margin-top: 1px;
@@ -40,6 +41,40 @@
                 transform: translateY(-45%);
             }
         }
-        
+    }
+}
+.pre-next{
+    flex: 0 0 15%;
+}
+.replay-modal{
+    position: absolute;
+    bottom: -5px;
+    width: 100%;
+    transition: 0.5s;
+    &.hide{
+        opacity: 0;
+        z-index: -10;
+    }
+    &.show{
+        opacity: 1;
+        z-index: 1000;
+    }
+    .header{
+        background-color: $gray-100;
+    }
+    .content{
+        textarea{
+            height: 263px;
+            border: 0;
+            width: 100%;
+            &:focus{
+                outline: 0;
+            }
+        }
+    }
+    .replay-moadl-btn{
+        position: absolute;
+        bottom: 16px;
+        right: 24px;
     }
 }
