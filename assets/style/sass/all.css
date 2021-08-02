@@ -63,7 +63,7 @@ img {
   height: auto; }
 
 body {
-  line-height: 1.5;
+  line-height: 1.2;
   font-family: 'Lato', sans-serif;
   font-weight: bold; }
 
@@ -5657,6 +5657,9 @@ form {
 .border-success {
   border: 1px solid #198754; }
 
+.border-b-gray {
+  border-bottom: 1px solid #CED4DA; }
+
 @media screen and (max-width: 996px) {
   .b-md-none {
     border: 0 !important; }
@@ -5675,6 +5678,9 @@ form {
 
 .f-f-ch {
   font-family: "Noto Sans", sans-serif; }
+
+.f-w-normal {
+  font-weight: normal; }
 
 .f-w-bold {
   font-weight: bold; }
@@ -5746,19 +5752,19 @@ form {
   font-size: 16px; }
 
 .f-size-xs {
-  font-size: 20px; }
+  font-size: 12px; }
 
 .f-size-s {
-  font-size: 24px; }
+  font-size: 14px; }
 
 .f-size-m {
-  font-size: 36px; }
+  font-size: 20px; }
 
 .f-size-l {
-  font-size: 48px; }
+  font-size: 24px; }
 
 .h2 {
-  font-size: 20px;
+  font-size: 24px;
   color: #212529;
   font-weight: bold; }
 
@@ -5770,14 +5776,16 @@ form {
 .hover-success {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
-  transition: 0.3s; }
+  transition: 0.3s;
+  cursor: pointer; }
   .hover-success:hover {
     color: #198754; }
 
 .hover-success-bg {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
-  transition: 0.3s; }
+  transition: 0.3s;
+  cursor: pointer; }
   .hover-success-bg:hover {
     color: #ffffff;
     background-color: #198754 !important; }
@@ -5785,7 +5793,8 @@ form {
 .hover-danger-bg {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
-  transition: 0.3s; }
+  transition: 0.3s;
+  cursor: pointer; }
   .hover-danger-bg:hover {
     color: #ffffff;
     background-color: #DC3545 !important; }
@@ -5793,14 +5802,16 @@ form {
 .hover-light {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
-  transition: 0.3s; }
+  transition: 0.3s;
+  cursor: pointer; }
   .hover-light:hover {
     color: #21b26f; }
 
 .hover-light-bg {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
-  transition: 0.3s; }
+  transition: 0.3s;
+  cursor: pointer; }
   .hover-light-bg:hover {
     color: #115c39;
     background-color: #21b26f; }
@@ -5813,6 +5824,23 @@ form {
   height: 100%;
   z-index: 10;
   background-color: rgba(0, 0, 0, 0.5); }
+
+.circle-img {
+  vertical-align: middle;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  -o-object-fit: cover;
+     object-fit: cover; }
+
+.l-h-m {
+  line-height: 1.4; }
+
+.code-block {
+  color: #198754;
+  background-color: #F8F9FA;
+  padding-left: 4px;
+  padding-right: 4px; }
 
 .aside {
   height: 100vh;
@@ -5889,7 +5917,6 @@ form {
   padding-bottom: 16px;
   font-weight: normal;
   border-bottom: 1px solid #bdc6d0;
-  line-height: 1.1;
   color: #212529; }
   .admin td a {
     font-size: 20px;
@@ -5930,8 +5957,7 @@ form {
   .card .card-body {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 66%;
-            flex: 0 0 66%;
-    line-height: 1.2; }
+            flex: 0 0 66%; }
   .card .card-body-bottom i.active {
     -webkit-transform: rotate(180deg);
         -ms-transform: rotate(180deg);
@@ -6007,5 +6033,45 @@ form input[type=checkbox] {
   width: auto;
   display: inline-block;
   margin-bottom: 20px; }
+
+.assign-menu {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 30%;
+          flex: 0 0 30%; }
+
+.assign-menu-content {
+  font-weight: normal; }
+  .assign-menu-content li:hover, .assign-menu-content li.active {
+    cursor: pointer;
+    background-color: #F8F9FA; }
+  .assign-menu-content p, .assign-menu-content span {
+    font-size: 12px;
+    font-weight: normal; }
+
+.assign-message {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 67%;
+          flex: 0 0 67%; }
+
+.assign-message-title {
+  margin-top: 1px; }
+  .assign-message-title p {
+    font-size: 12px;
+    font-weight: normal; }
+
+.assign-message-content {
+  font-weight: normal; }
+  .assign-message-content li.active {
+    background-color: #F8F9FA; }
+  .assign-message-content li .file {
+    position: relative;
+    display: inline-block; }
+    .assign-message-content li .file span {
+      position: absolute;
+      top: 45%;
+      left: 5%;
+      -webkit-transform: translateY(-45%);
+          -ms-transform: translateY(-45%);
+              transform: translateY(-45%); }
 
 /*# sourceMappingURL=all.css.map */
