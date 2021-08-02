@@ -6,11 +6,85 @@ current: index
 ---
 
 
-<div class="header d-flex align-items-end">
+<div class="header d-flex align-items-end mb-15">
     <h2 class="h2 mr-12">Assignment</h2>
     <h3>All Courses <i class="fas fa-chevron-down ml-2"></i></h3>
     <div class="search ml-auto">
-        <i class="fas fa-search f-size-xs mr-6"></i>
-        <i class="fas fa-bell f-size-xs"></i>
+        <i class="fas fa-search f-size-m mr-6 hover-success"></i>
+        <i class="fas fa-bell f-size-m hover-success"></i>
+    </div>
+</div>
+
+<div class="assign d-flex jy-content-between">
+    <div class="assign-menu">
+        <div class="assign-menu-title mb-2">
+            <p class="text-c-gray-900">All (4) <i class="fas fa-chevron-down text-c-success hover-light ml-2"></i></p>
+        </div>
+        <ul class="assign-menu-content border-gray">
+            <li class="p-3 border-b-gray active">
+                <p class="d-flex jy-content-between mb-2">Chapter Assignment 2<span>4 hrs ago</span></p>
+                <h3 class="d-flex jy-content-between f-w-bold">Please check this file…<span class="align-self-end">Emily Wang</span></h3>
+            </li>
+            <li class="p-3 border-b-gray">
+                <p class="d-flex jy-content-between mb-2">Chapter Assignment 1<span>12 hrs ago</span></p>
+                <h3 class="d-flex jy-content-between f-w-bold">My Homework<span class="align-self-end">David Xu</span></h3>
+            </li>
+            <li class="p-3 border-b-gray">
+                <p class="d-flex jy-content-between mb-2">Final Assignment<span>18 hrs ago</span></p>
+                <h3 class="d-flex jy-content-between f-w-bold">Have a problem with this…<span class="align-self-end">Tony Wei</span></h3>
+            </li>
+            <li class="p-3">
+                <p class="d-flex jy-content-between mb-2">Final Assignment<span>19 hrs ago</span></p>
+                <h3 class="d-flex jy-content-between f-w-bold">Did I do it right?<span class="align-self-end">Christina Lin</span></h3>
+            </li>
+        </ul>
+    </div>
+    <div class="assign-message">
+        <div class="assign-message-title mb-3">
+            <p class="text-c-gray-600 text-right">2 comments</p>
+        </div>
+        <ul class="assign-message-content border-gray">
+            <li class="py-3 px-4 border-b-gray d-flex jy-content-between align-items-center active">
+                <div class="assign-message-content-text">
+                    <p class="mb-1">Chapter Assignment 2 / HTML&CSS</p>
+                    <h3 class="f-w-bold">Please check this file for me, thanks!</h3>
+                </div>
+                <div class="assign-message-content-icon">
+                    <span class="material-icons">more_vert</span>
+                </div>
+            </li>
+            <li class="py-4 pr-8 pl-4 d-flex">
+                <div class="assign-message-content-img mr-2">
+                   <img class="circle-img" src="https://hexschool.github.io/webLayoutTraining1st/week5/emilywang.jpeg" alt="message-img">
+                </div>
+                <div class="assign-message-content-text border-b-gray pb-4">
+                    <div class="assign-message-content-text-title">
+                        <p class="f-w-bold mb-1">Emily Wang</p>
+                        <p class="text-c-gray-600 mb-4 f-size-xs">10:38 AM (4 hours ago)</p>
+                    </div>
+                    <p class="mb-4 f-size-s l-h-m">Hi Teacher, the attached file is my homework of chapter 2. And here comes a<br> question: Why in the following code the height of the div is bigger than the<br> height of the img ? There is a gap below the image, but it doesn’t seems to be a<br> padding/margin.<br> 
+                    What is the gap or extra space below image?
+                    </p>
+                    <label for="file" class="file">
+                        <span class="material-icons">attach_file</span>
+                        <input class="pl-8 pr-3 py-2 f-w-bold" type="button" value="HW-2-David.zip">
+                    </label>
+                 </div>
+            </li>
+            <li class="py-4 pr-8 pl-4 d-flex">
+                <div class="assign-message-content-img mr-2">
+                   <img class="circle-img" src="https://hexschool.github.io/webLayoutTraining1st/week5/andychen.jpeg" alt="message-img">
+                </div>
+                <div class="assign-message-content-text pb-4">
+                    <div class="assing-message-content-text-title">
+                        <p class="f-w-bold mb-1">Emily Wang</p>
+                        <p class="text-c-gray-600 mb-4 f-size-xs">13:24 AM (1 hours ago)</p>
+                    </div>
+                    <p class="mb-4 f-size-s l-h-m">Hi David, by default, an image is rendered inline, like a letter so it sits on the same<br> line that a, b, c and d sit on. There is space below that line for the <br>descenders you find on letters like g, j, p and q. <br><br><br>You can:<br><br> 　• adjust the <span class="code-block">vertical-align</span> of the image to position it elsewhere (e.g.<br> the <span class="code-block">middle</span> ) or 　<br> 　• change the <span class="code-block">display</span> so it isn’t inline.
+                    </p>
+                 </div>
+            </li>
+        </ul>
+
     </div>
 </div>

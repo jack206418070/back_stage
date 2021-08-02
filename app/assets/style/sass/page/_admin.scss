@@ -33,10 +33,9 @@
         padding-bottom: 16px;
         font-weight: normal;
         border-bottom: 1px solid darken($gray-100,20%);
-        line-height: 1.1;
         color: $gray-900;
         a{
-            font-size: $font-xs;
+            font-size: $font-m;
             transition: 0.3s;
             &:hover{
                 color: $success;
@@ -75,7 +74,6 @@
     }
     .card-body{
         flex: 0 0 66%;
-        line-height: 1.2;
     }
     .card-body-bottom{
         i{
@@ -143,7 +141,7 @@
 form{
     label{
         display: block;
-        font-size: 14px;
+        font-size: $font-s;
         line-height: 1.1;
     }
     input{

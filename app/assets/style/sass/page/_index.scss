@@ -1,0 +1,45 @@
+.assign-menu{
+    flex: 0 0 30%;
+}
+.assign-menu-content{
+    font-weight: normal;
+    li{
+        &:hover, &.active{
+            cursor: pointer;
+            background-color: $gray-100;
+        }
+    }
+    p,span{
+        font-size: 12px;
+        font-weight: normal;
+    }
+}
+.assign-message{
+    flex: 0 0 67%;
+}
+.assign-message-title{
+    margin-top: 1px;
+    p{
+        font-size: 12px;
+        font-weight: normal;
+    }
+}
+.assign-message-content{
+    font-weight: normal;
+    li{
+        &.active{
+            background-color: $gray-100;
+        }
+        .file{
+            position: relative; 
+            display: inline-block;
+            span{
+                position: absolute;
+                top: 45%;
+                left: 5%;
+                transform: translateY(-45%);
+            }
+        }
+        
+    }
+}

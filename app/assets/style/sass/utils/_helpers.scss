@@ -330,6 +330,9 @@
 .border-success{
     border: 1px solid $success;
 }
+.border-b-gray{
+    border-bottom: 1px solid $gray-400;
+}
 
 @include pad{
     .b-md-none{
@@ -355,6 +358,9 @@
 
 .f-f-ch{
     font-family: $font-chinese;
+}
+.f-w-normal{
+    font-weight: normal;
 }
 
 .f-w-bold{
@@ -471,7 +477,7 @@
 
 
 .h2{
-    font-size: $font-xs;
+    font-size: 24px;
     color: $gray-900;
     font-weight: bold;
 }
@@ -482,12 +488,14 @@
 }
 .hover-success{
     transition: 0.3s;
+    cursor: pointer;
     &:hover{
         color: $success;
     }
 }
 .hover-success-bg{
     transition: 0.3s;
+    cursor: pointer;
     &:hover{
         color: $white;
         background-color: $success !important;
@@ -495,6 +503,7 @@
 }
 .hover-danger-bg{
     transition: 0.3s;
+    cursor: pointer;
     &:hover{
         color: $white;
         background-color: $danger !important;
@@ -502,12 +511,14 @@
 }
 .hover-light{
     transition: 0.3s;
+    cursor: pointer;
     &:hover{
         color: lighten($success, 10%);
     }
 }
 .hover-light-bg{
     transition: 0.3s;
+    cursor: pointer;
     &:hover{
         color: darken($success, 10%);
         background-color: lighten($success, 10%);
@@ -522,4 +533,23 @@
     height: 100%;
     z-index: 10;
     background-color: rgba(0,0,0,0.5);
+}
+
+.circle-img{
+    vertical-align: middle;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.l-h-m{
+    line-height: 1.4;
+}
+
+.code-block{
+    color: $success;
+    background-color: $gray-100;
+    padding-left: 4px;
+    padding-right: 4px;
 }
