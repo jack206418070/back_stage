@@ -24,22 +24,22 @@
       </div>
       <ul class="aside-menu">
         <li class="pl-8">
-          <a href="#" class=""><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+          <a href="#" data-num="1"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
         </li>
         <li class="pl-8">
-          <a href="#" class=""><i class="fas fa-comments"></i> Question</a>
+          <a href="#" data-num="2"><i class="fas fa-comments"></i> Question</a>
         </li>
         <li class="pl-8">
-          <a href="#" class=""><i class="fas fa-atlas"></i> Assignment</a>
+          <a href="./index.html" data-num="3"><i class="fas fa-atlas"></i> Assignment</a>
         </li>
         <li class="pl-8">
-          <a href="#" class=""><i class="fas fa-file-video"></i> Course</a>
+          <a href="#" data-num="4"><i class="fas fa-file-video"></i> Course</a>
         </li>
         <li class="pl-8">
-          <a href="./admin.html" class=""><i class="fas fa-users-cog"></i>Admin</a>
+          <a href="./admin.html" data-num="5"><i class="fas fa-users-cog"></i>Admin</a>
         </li>
         <li class="pl-8">
-          <a href="#" class=""><i class="fas fa-cog"></i> Settings</a>
+          <a href="#" data-num="6"><i class="fas fa-cog"></i> Settings</a>
         </li>
       </ul>
   
@@ -92,7 +92,7 @@
         <div class="assign-message-title mb-3">
             <p class="text-c-gray-600 text-right">2 comments</p>
         </div>
-        <ul class="assign-message-content border-gray">
+        <ul class="assign-message-content border-gray mb-4">
             <li class="py-3 px-4 border-b-gray d-flex jy-content-between align-items-center active">
                 <div class="assign-message-content-text">
                     <p class="mb-1">Chapter Assignment 2 / HTML&CSS</p>
@@ -102,7 +102,7 @@
                     <span class="material-icons">more_vert</span>
                 </div>
             </li>
-            <li class="py-4 pr-8 pl-4 d-flex">
+            <li class="pt-4 pr-8 pl-4 d-flex">
                 <div class="assign-message-content-img mr-2">
                    <img class="circle-img" src="https://hexschool.github.io/webLayoutTraining1st/week5/emilywang.jpeg" alt="message-img">
                 </div>
@@ -120,27 +120,79 @@
                     </label>
                  </div>
             </li>
-            <li class="py-4 pr-8 pl-4 d-flex">
+            <li class="pt-4 pr-8 pl-4 d-flex">
                 <div class="assign-message-content-img mr-2">
                    <img class="circle-img" src="https://hexschool.github.io/webLayoutTraining1st/week5/andychen.jpeg" alt="message-img">
                 </div>
-                <div class="assign-message-content-text pb-4">
+                <div class="assign-message-content-text">
                     <div class="assing-message-content-text-title">
                         <p class="f-w-bold mb-1">Emily Wang</p>
                         <p class="text-c-gray-600 mb-4 f-size-xs">13:24 AM (1 hours ago)</p>
                     </div>
-                    <p class="mb-4 f-size-s l-h-m">Hi David, by default, an image is rendered inline, like a letter so it sits on the same<br> line that a, b, c and d sit on. There is space below that line for the <br>descenders you find on letters like g, j, p and q. <br><br><br>You can:<br><br> 　• adjust the <span class="code-block">vertical-align</span> of the image to position it elsewhere (e.g.<br> the <span class="code-block">middle</span> ) or 　<br> 　• change the <span class="code-block">display</span> so it isn’t inline.
+                    <p class="mb-4 f-size-s l-h-m">Hi David, by default, an image is rendered inline, like a letter so it sits on the same<br> line that a, b, c and d sit on. There is space below that line for the <br>descenders you find on letters like g, j, p and q. <br><br>You can:<br><br> 　• adjust the <span class="code-block">vertical-align</span> of the image to position it elsewhere (e.g.<br> the <span class="code-block">middle</span> ) or 　<br> 　• change the <span class="code-block">display</span> so it isn’t inline.
                     </p>
                  </div>
             </li>
         </ul>
-
+        <div class="assign-message-footer d-flex jy-content-between align-items-center">
+            <div class="pre-next d-flex">
+                <span class="material-icons-outlined hover-success mr-6">chevron_left</span>
+                <span class="material-icons-outlined hover-success">chevron_right</span>
+            </div>
+            <div class="assign-message-button d-flex">
+                <input class="btn btn-white border-success text-c-success hover-success-bg px-8 py-2 mr-4" type="button" value="Mark as read">
+                <input class="btn btn-success text-c-white hover-light px-8 py-2 js-message-open" type="button" value="Reply">
+            </div>
+        </div>
+        <div class="replay-modal border-gray hide">
+            <div class="header bg-gray pl-6 py-5">
+                <p class="f-w-bold d-flex align-items-center">Body Text
+                    <span class="material-icons-outlined ml-2 mr-6">
+                        arrow_drop_down
+                    </span>
+                    <span class="material-icons mr-6">
+                        format_bold
+                    </span>
+                        
+                    <span class="material-icons mr-6">
+                        format_italic
+                    </span>
+                        
+                    <span class="material-icons mr-6">
+                        format_list_bulleted
+                    </span>
+                        
+                    <span class="material-icons mr-6">
+                        format_list_numbered
+                    </span>
+                        
+                    <span class="material-icons mr-6">
+                        image
+                    </span>
+                        
+                    <span class="material-icons mr-6">
+                        attachment
+                    </span>
+                        
+                    <span class="material-icons">
+                        code
+                    </span>
+                </p>
+            </div>
+            <div class="content">
+                <textarea class="py-4 px-6 text-c-gray-400" name="message-input" id="message-input" placeholder="Reply an answer…"></textarea>
+            </div>
+            <div class="replay-moadl-btn d-flex">
+                <input class="btn btn-white py-2 px-8 text-c-success border-success hover-success-bg mr-2 js-message-close" type="button" value="Cancel" data-toggle="close">
+                <input class="btn btn-success py-2 px-8 text-c-white hover-light" type="button" value="Reply">
+            </div>
+        </div>
     </div>
 </div>
+<script src="./assets/script/index.js"></script>
     </div>
   </div>
 
   <script src="./assets/js/vendors.js"></script>
-  <script src="./assets/script/all.js"></script>
 </body>
 </html>
