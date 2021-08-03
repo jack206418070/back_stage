@@ -6086,15 +6086,23 @@ form input[type=checkbox] {
   position: absolute;
   bottom: -5px;
   width: 100%;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s; }
+  height: 50%;
+  -webkit-transition: width 1s, height 1s, opacity .8s;
+  -o-transition: width 1s, height 1s, opacity .8s;
+  transition: width 1s, height 1s, opacity .8s;
+  overflow: hidden; }
   .replay-modal.hide {
+    width: 0%;
+    height: 0%;
+    right: 0;
     opacity: 0;
-    z-index: -10; }
+    z-index: -1; }
   .replay-modal.show {
+    width: 100%;
+    height: 50%;
+    right: 0;
     opacity: 1;
-    z-index: 1000; }
+    z-index: 100; }
   .replay-modal .header {
     background-color: #F8F9FA; }
   .replay-modal .content textarea {
