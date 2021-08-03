@@ -6024,6 +6024,8 @@ form input {
   background: #F8F9FA;
   outline: none;
   border: none; }
+  form input:focus {
+    outline: 2px solid #CED4DA; }
 
 form select {
   width: 100%;
