@@ -5929,7 +5929,6 @@ form {
 .card {
   width: 480px;
   height: 205px;
-  z-index: 100;
   top: 0;
   left: 0;
   bottom: 0;
@@ -5940,10 +5939,10 @@ form {
   transition: 1s; }
   .card.hide {
     opacity: 0;
-    z-index: 100; }
+    z-index: -1; }
   .card.show {
     opacity: 1;
-    z-index: 1000; }
+    z-index: 100; }
   .card.show-bg {
     height: 272px; }
   .card .card-img {
@@ -5978,7 +5977,6 @@ form {
 .modal {
   width: 30%;
   height: 70%;
-  z-index: 100;
   top: 0;
   bottom: 0;
   left: 0;
@@ -5990,10 +5988,10 @@ form {
   transition: 1s; }
   .modal.hide {
     opacity: 0;
-    z-index: 100; }
+    z-index: -1; }
   .modal.show {
     opacity: 1;
-    z-index: 1000; }
+    z-index: 100; }
   .modal .modal-title {
     position: fixed;
     background-color: #fff;
